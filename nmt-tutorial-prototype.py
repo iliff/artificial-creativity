@@ -82,7 +82,7 @@ model.fit(x=[hebrew_texts, english_texts], y=categorical_next_step, epochs=500,
 
 # TEST BY TRYING TO PREDICT NEXT STEP ARRAY BASED UPON 1ST ROW OF HEBREW AND 1ST ROW OF ENGLISH
 predictions = model.predict(x=[hebrew_texts[1].reshape((1, 5)), english_texts[1].reshape((1, 6))])
-print([np.argmax(a) for a in predictions[0]])  # should be close to [3, 4, 5, 6, 2, 0]
+print([np.argmax(a) for a in predictions[0]])  # should be close to [3, 4, 5, 7, 2, 0]
 
 #######################################################################
 # MODEL 2 (INFERENCE 1): GIVEN HEBREW INPUTS, PREDICT A CORRESPONDING
@@ -98,9 +98,9 @@ print(inference_prediction_hebrew)  # prints arrays: [array.shape == (1, 256), a
 
 #######################################################################
 # MODEL 3 (INFERENCE 2): GIVEN AN ENGLISH STARTING POINT (INPUT),
-#   ENGLISH HIDDEN STATE, AND ENGLISH CELL STATE, PREDICT AN
-#   ENGLISH NEXT-STEP OUTPUT, A NEW ENGLISH HIDDEN STATE, AND A NEW
-#   ENGLISH CELL STATE
+#   HEBREW/ENGLISH HIDDEN STATE, AND HEBREW/ENGLISH CELL STATE, PREDICT
+#   AN ENGLISH NEXT-STEP OUTPUT, A NEW HEBREW/ENGLISH HIDDEN STATE, AND
+#   A NEW HEBREW/ENGLISH CELL STATE
 #######################################################################
 
 hidden_english_input = Input(shape=(256,))
