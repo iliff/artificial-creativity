@@ -40,8 +40,8 @@ english_texts = np.array([1, 3, 4, 5, 6, 2] +
 # 4 ENGLISH SENTENCES ONE STEP AHEAD OF ENGLISH SENTENCES ABOVE
 next_step_english_texts = np.array([3, 4, 5, 6, 2, 0] +
                                    [3, 4, 5, 7, 2, 0] +
-                                   [3, 4, 5, 6, 2, 0] +
-                                   [3, 4, 5, 7, 2, 0]).reshape((4, 6))
+                                   [5, 6, 2, 0, 0, 0] +
+                                   [5, 7, 2, 0, 0, 0]).reshape((4, 6))
 
 #######################################################################
 # MODEL 1 (FOR TRAINING ONLY): GIVEN A HEBREW SENTENCE AND AN ENGLISH
