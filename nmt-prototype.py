@@ -1,13 +1,10 @@
 """
-A very simple beginning tutorial to machine translation with neural networks.
-Need to test on a larger data set to be sure I have not overlooked anything.
+A very simple neural network for machine translation.
 Start with sentence represented by a list of numbers, where every number
 represents a word. Outputs a sequence of numbers which would represent a
-target language sentence. We can refine this to make it more understandable.
-And we can demonstrate how several viable sentences can come from a single
-source language starting point.
+target language sentence.
 
-Creator: Justin (jbarber@iliff.edu) :-)
+Creator: Justin (jbarber@iliff.edu)
 """
 
 import numpy as np
