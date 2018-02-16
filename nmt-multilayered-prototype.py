@@ -1,3 +1,9 @@
+"""
+An example of neural achine translation.
+
+Creator: Justin (jbarber@iliff.edu)
+"""
+
 import re
 
 import numpy as np
